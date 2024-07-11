@@ -85,18 +85,20 @@ body {
 	font-style: italic;
 	width: 60%;
 }
-#about-me p {
+#about-me p{
 	width: 80%;
 	font-size: 14px;
 }
 
-#gallery {
-	/*	min-height: 100vh; */
-}
+/* #gallery {
+	min-height: 100vh;
+} */
+
 .title{
 	text-align: center;
 	padding-block: 2em;
 }
+
 .gallery .nav {
 	justify-content: center;
 }
@@ -105,9 +107,24 @@ body {
 	background-color: #BEB45A;
 	border-radius:0 ;
 }
+
+.nav-pills .nav-link.active, .nav-pills .show > .nav-link:hover {
+	color: #fff;
+	background-color: #BEB45A;
+	border-radius:0 ;
+}
+
+
 .nav-pills .nav-link {
 	color: #000
 }
+
+.nav-pills .nav-link:hover {
+	color: #fff;
+	background-color: #BEB45A;
+	border-radius:0 ;
+}
+
 .item-column {
 	position: relative;
 	margin-bottom: 0 !important;
