@@ -167,7 +167,7 @@
           // console.log(this)
         }
       });
-      next = imagesCollection[index-1] //|| imagesCollection[imagesCollection.length - 1];
+      next = imagesCollection[index-1] || imagesCollection[imagesCollection.length - 1];
       // console.log(imagesCollection[index])
       // console.log(imagesCollection[imagesCollection.length - 1])
       // console.log(imagesCollection[index])
@@ -215,7 +215,7 @@
           index = i;
         }
       });
-      next = imagesCollection[index+1] //|| imagesCollection[0];
+      next = imagesCollection[index+1] || imagesCollection[0];
       // console.log(imagesCollection[index])
       // console.log(imagesCollection[imagesCollection.length - 1])
       // console.log(next)
