@@ -3,9 +3,23 @@
 <head>
 	<meta charset="UTF-8">
 	<meta name="viewport" content="width=device-width, initial-scale=1.0" name="description">
-	<meta content="Photographe professionnelle pour réaliser des portraits, couvrir des mariages, concerts ou autre évènement festif">
+	<meta content="Photographe professionnelle à Bordeaux pour réaliser des portraits, couvrir des mariages, concerts ou autre évènement festif">
 	
 	<!-- <meta name="twitter:card" content=""> -->
+
+	<meta property="og:site_name" content="Nina Carducci Photographe" />
+	<meta property="og:type" content="website" />
+	<meta property="og:url" content="https://arthurizad.github.io/projet_4_OC/" />
+	<meta property="og:title" content="MonSiteWeb - Plein d'articles géniaux" />
+	<meta property="og:description" content="Photographe professionnelle à Bordeaux pour réaliser des portraits, couvrir des mariages, concerts ou autre évènement festif" />
+	<meta property="og:image" content="./assets/images/nina.webp"/>
+
+	<meta name="twitter:card" content="summary_large_image" />
+	<meta name="twitter:site" content="@monCompteTwitter" />
+	<meta name="twitter:title" content="Nina Carducci Photographe" />
+	<meta name="twitter:description" content="Photographe professionnelle à Bordeaux pour réaliser des portraits, couvrir des mariages, concerts ou autre évènement festif" />
+	<meta name="twitter:image" content="./assets/images/nina.webp" />
+	<meta name="twitter:url" content="https://arthurizad.github.io/projet_4_OC/" />
 
 
 	<link rel="stylesheet" href="./assets/bootstrap/bootstrap.min.css">
@@ -18,7 +32,7 @@
 	<script src="https://code.jquery.com/jquery-3.4.1.min.js" integrity="sha256-CSXorXvZcTkaix6Yvo6HppcZGetbYMGWSFlBw8HfCJo=" crossorigin="anonymous"></script>
 	<script defer src="./assets/maugallery.js"></script>
 	<script defer src="./assets/scripts.js"></script>
-	<title>Nina Carducci</title>
+	<title>Nina Carducci Photographe</title>
 </head>
 <body>
 	<header class="top-header">
@@ -104,13 +118,16 @@
 			<h3 class="title">Mes services</h3>
 			<div class="container">
 				<div class="service">
+					<meta itemprop="priceCurrency" content="EUR">
 					<div class="service__description">
 						<h3>Shooting photo</h3>
 						<p>Pour capturer vos moments les plus précieux et garder un souvenir impérissable. Je me déplace en Île-de-France pour réaliser vos photos</p>
 					</div>
 					<div class="service__price">
 						<h4>350€/demi journée</h4>
-						<span>Matériel, déplacement inclus</span>
+						<span>Matériel, déplacement inclus 
+							<meta itemprop="price" content="350">
+						</span>
 					</div>
 
 				</div>
@@ -168,18 +185,16 @@
 		<div itemscope itemtype="https://schema.org/ArtGallery" class="location_info">
 			<h3 class="title">Informations complémentaires</h3>
 			<p>
-				<span itemprop="address">
-					68 avenue Alsace Lorraine, 33200 Bordeaux
-				</span> 
-				<br>
-				<span itemprop="telephone">
+				<div itemprop="address" itemscope itemtype="https://schema.org/PostalAddress">
+					<span itemprop="streetAddress">68 avenue Alsace Lorraine, 33200 Bordeaux</span>
+				</div> 
+				<div itemprop="telephone">
 					05 56 67 78 89
-				</span>
-				<br>
-				<span itemprop="openingHours">
+				</div>
+				<div itemprop="openingHours">
 					<meta itemprop="openingHours" content="Lundi au vendredi, 10h-19h">
 					Horaire: Du lundi au vendredi, de 10h à 19h
-				</span>
+				</div>
 				
 			</p>	
 		</div>
