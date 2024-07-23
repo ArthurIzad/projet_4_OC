@@ -281,7 +281,7 @@
           $(mes_tag[i]).attr("style", "background-color: none;")
         }
         let color = $(this)
-        color.attr("style", "background-color: #BEB45A; color: white;");
+        color.attr("style", "background-color: #BEB45A; color: black;");
         // return;
       }
       
