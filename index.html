@@ -78,7 +78,7 @@
 		</div>
 		<div id="about">
 			<div class="picture left">
-				<img src="./assets/images/nina.webp" alt="Portrait de Nina">
+				<img itemprop="image" src="./assets/images/nina.webp" alt="Portrait de Nina">
 			</div>
 			<div id="about-me">
 				<h3 class="about-me__title">A propos de moi</h3>
@@ -105,7 +105,7 @@
 			<div class="quote">
 				<figure>
 					<blockquote>
-						<h1 class="quote__text">Un portrait n’est pas une ressemblance. Dès lors qu’une émotion ou qu’un fait est traduit en photo, il cesse d’être un fait pour devenir une opinion. L’inexactitude n’existe pas en photographie. Toutes les photos sont exactes. Aucune d’elles n’est la vérité.</h1>
+						<h1 class="quote__text">Un portrait n'est pas une ressemblance. Dès lors qu’une émotion ou qu’un fait est traduit en photo, il cesse d’être un fait pour devenir une opinion. L’inexactitude n’existe pas en photographie. Toutes les photos sont exactes. Aucune d’elles n’est la vérité.</h1>
 					</blockquote>
 					<figcaption class="quote__author">- Richard Avedon</figcaption>
 				</figure>
@@ -183,7 +183,12 @@
 			<h3 class="title">Informations complémentaires</h3>
 			<div itemprop="name">Nina Carducci</div>
 			<div itemprop="address" itemscope itemtype="https://schema.org/PostalAddress">
-				<span itemprop="streetAddress">68 avenue Alsace Lorraine, 33200 Bordeaux</span>
+				<span itemprop="streetAddress">
+					68 avenue Alsace Lorraine, 
+					<span itemprop="postalCode">33200</span> 
+					<span itemprop="addressLocality">Bordeaux</span>
+				</span>
+				<meta >
 			</div> 
 			<div itemprop="telephone">
 				05 56 67 78 89
@@ -191,6 +196,7 @@
 			<div>
 				<meta itemprop="openingHours" content="Lundi au vendredi, 10h-19h">
 				Horaire: Du lundi au vendredi, de 10h à 19h
+				<meta itemprop="priceRange" content="50 euros à 400 euros">
 			</div>
 				
 			
