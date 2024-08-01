@@ -1,13 +1,9 @@
 (function($) {
   $.fn.mauGallery = function(options) {
-    // console.log($.fn.mauGallery)
     var options = $.extend($.fn.mauGallery.defaults, options);
-    // console.log(options);
     var tagsCollection = [];
     return this.each(function() {
-      // console.log(this)
       $.fn.mauGallery.methods.createRowWrapper($(this));
-      // console.log(this)
       if (options.lightBox) {
         $.fn.mauGallery.methods.createLightBox(
           $(this),
@@ -21,11 +17,9 @@
         .children(".gallery-item")
         .each(function(index) {
           $.fn.mauGallery.methods.responsiveImageItem($(this));
-          // console.log(this)
           $.fn.mauGallery.methods.moveItemInRowWrapper($(this));
           $.fn.mauGallery.methods.wrapItemInColumn($(this), options.columns);
           var theTag = $(this).data("gallery-tag");
-          // console.log(theTag)
           if (
             options.showTags &&
             theTag !== undefined &&
@@ -36,7 +30,6 @@
         });
 
       if (options.showTags) {
-        // console.log(this)
         $.fn.mauGallery.methods.showItemTags(
           $(this),
           options.tagsPosition,
@@ -126,24 +119,20 @@
         .attr("src", element.attr("src"));
       $(`#${lightboxId}`).modal("toggle");
     },
-    prevImage() { /////////////////////////////////////////////////
+    prevImage() { 
       let activeImage = null;
       $("img.gallery-item").each(function() {
         if ($(this).attr("src") === $(".lightboxImage").attr("src")) {
           activeImage = $(this);
         }
-        // console.log(activeImage)
-        // console.log("a")
+        
       });
       let activeTag = $(".tags-bar span.active-tag").data("images-toggle");
-      // console.log(activeTag)
       let imagesCollection = [];
       if (activeTag === "all") {
         $(".item-column").each(function() {
           if ($(this).children("img").length) {
-            // console.log(this)
             imagesCollection.push($(this).children("img"));
-            // console.log(imagesCollection)
           }
         });
       } else {
@@ -163,22 +152,13 @@
       $(imagesCollection).each(function(i) {
         if ($(activeImage).attr("src") === $(this).attr("src")) {
           index = i ;
-          // console.log(index)
-          // console.log(this)
+          
         }
       });
+      //////
       next = imagesCollection[index-1] || imagesCollection[imagesCollection.length - 1];
-      // console.log(imagesCollection[index])
-      // console.log(imagesCollection[imagesCollection.length - 1])
-      // console.log(imagesCollection[index])
-      // console.log(imagesCollection[index-1])
-
-      // console.log(imagesCollection)
-
-      // console.log(next)
-      // console.log(activeImage)
+      
       $(".lightboxImage").attr("src", $(next).attr("src"));
-      // console.log($(".lightboxImage"));
 
     },
     nextImage() {
@@ -216,9 +196,6 @@
         }
       });
       next = imagesCollection[index+1] || imagesCollection[0];
-      // console.log(imagesCollection[index])
-      // console.log(imagesCollection[imagesCollection.length - 1])
-      // console.log(next)
       $(".lightboxImage").attr("src", $(next).attr("src"));
     },
     createLightBox(gallery, lightboxId, navigation) {
@@ -252,8 +229,6 @@
                 <span class="nav-link"  data-images-toggle="${value}">${value}</span></li>`;
       });
       var tagsRow = `<ul class="my-4 tags-bar nav nav-pills">${tagItems}</ul>`;
-      // console.log(tagsRow)
-      // console.log(position)
 
       if (position === "bottom") {
         gallery.append(tagsRow);
@@ -264,7 +239,6 @@
       }
     },
     filterByTag() {
-      // console.log($(".nav-link"))
       if ($(this).hasClass("active-tag")) {
         let color = $(this)
         color.attr("style", "background-color: none;");
